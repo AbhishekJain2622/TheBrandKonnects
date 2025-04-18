@@ -794,7 +794,7 @@ export default function Services() {
             <div className="testimonial-card bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
               <div className="flex items-center mb-6">
                 <Image
-                  src="/placeholder.svg?height=60&width=60"
+                  src="/images/p15.jpg"
                   alt="Client"
                   width={60}
                   height={60}
@@ -830,12 +830,12 @@ export default function Services() {
 
             <div className="testimonial-card bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
               <div className="flex items-center mb-6">
-                <Image
-                  src="/placeholder.svg?height=60&width=60"
+                <Image  
+                  src="/images/p16.jpg"
                   alt="Client"
                   width={60}
                   height={60}
-                  className="rounded-full mr-4"
+                  className="w-16 h-16 rounded-full mr-4"
                 />
                 <div>
                   <h4 className="font-bold">Michael Rodriguez</h4>
@@ -868,11 +868,11 @@ export default function Services() {
             <div className="testimonial-card bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
               <div className="flex items-center mb-6">
                 <Image
-                  src="/placeholder.svg?height=60&width=60"
+                  src="/images/p17.jpg"
                   alt="Client"
                   width={60}
                   height={60}
-                  className="rounded-full mr-4"
+                  className="w-16 h-16 rounded-full mr-4"
                 />
                 <div>
                   <h4 className="font-bold">Jennifer Lee</h4>

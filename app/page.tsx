@@ -56,7 +56,7 @@ export default function Home() {
       title: "Brand Strategy",
       description: "Develop a compelling brand identity and strategy that resonates with your target audience.",
       features: ["Brand Positioning", "Market Research", "Competitive Analysis"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/b7.jpg", // Image for the service
     },
     {
       icon: (
@@ -78,8 +78,9 @@ export default function Home() {
       title: "Event Management",
       description: "Create memorable experiences with our end-to-end event planning and execution services.",
       features: ["Corporate Events", "Product Launches", "Trade Shows"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/b1.jpg", // Image for the service
     },
+    
     {
       icon: (
         <svg
@@ -100,7 +101,7 @@ export default function Home() {
       title: "Digital Marketing",
       description: "Boost your online presence with our comprehensive digital marketing strategies.",
       features: ["Social Media Marketing", "SEO Optimization", "Content Strategy"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/b6.jpg", // Image for the service
     },
     {
       icon: (
@@ -126,7 +127,7 @@ export default function Home() {
       title: "Corporate Gifting",
       description: "Create memorable impressions with thoughtful, branded gifts for clients and partners.",
       features: ["Custom Gift Curation", "Branded Merchandise", "Gift Packaging"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/b2.jpg", // Image for the service
     },
     {
       icon: (
@@ -148,7 +149,7 @@ export default function Home() {
       title: "Custom Fabrication",
       description: "Bring your brand to life with custom-built displays, signage, and installations.",
       features: ["Exhibition Booths", "Custom Signage", "Retail Environments"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/b3.jpg", // Image for the service
     },
     {
       icon: (
@@ -172,9 +173,11 @@ export default function Home() {
       title: "Print Solutions",
       description: "High-quality printing services for all your marketing materials and brand collateral.",
       features: ["Marketing Collateral", "Large Format Printing", "Promotional Materials"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/b4.jpg", // Image for the service
     },
-  ]
+  ];
+  
+  
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -393,13 +396,14 @@ export default function Home() {
               >
                 {service.image && (
                   <div className="mb-4 overflow-hidden rounded-lg">
-                    <Image
-                      src="/B2.jpg"
-                      alt={service.title}
-                      width={400}
-                      height={200}
-                      className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
+                  <Image
+  src={service.image}
+  alt={service.title}
+  width={400}
+  height={200}
+  className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+/>
+
                   </div>
                 )}
                 <div className="flex items-start gap-4 mb-4">
