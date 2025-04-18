@@ -93,7 +93,7 @@ export default function About() {
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative bg-maroon-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0 opacity-20 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('/B03.jpg')] bg-cover bg-center"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center about-hero-text">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Brand Konnects</h1>
@@ -136,7 +136,7 @@ export default function About() {
             </div>
             <div className="story-image">
               <Image
-                src="/images/b3.jpg"
+                src="/b3.jpg"
                 alt="Brand Konnects Team"
                 width={600}
                 height={400}
@@ -211,12 +211,13 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: "Sarah Johnson", role: "Founder & CEO", image: "/placeholder.svg?height=400&width=400" },
-              { name: "Michael Chen", role: "Creative Director", image: "/placeholder.svg?height=400&width=400" },
-              { name: "Priya Sharma", role: "Event Manager", image: "/placeholder.svg?height=400&width=400" },
-              { name: "David Wilson", role: "Digital Marketing Lead", image: "/placeholder.svg?height=400&width=400" },
-              { name: "Olivia Martinez", role: "Brand Strategist", image: "/placeholder.svg?height=400&width=400" },
-              { name: "James Taylor", role: "Client Relations", image: "/placeholder.svg?height=400&width=400" },
+                           { name: "Sarah Johnson", role: "Founder & CEO", image: "/images/p15.jpg?height=400&width=400" },
+                           { name: "Michael Chen", role: "Creative Director", image: "/images/p16.jpg?height=400&width=400"},
+                           { name: "Priya Sharma", role: "Event Manager", image: "/images/p17.jpg?height=400&width=400" },
+                           { name: "David Wilson", role: "Digital Marketing Lead", image: "/images/p18.jpg?height=400&width=400" },
+                           { name: "Olivia Martinez", role: "Brand Strategist", image: "/images/p19.jpg?height=400&width=400" },
+                           { name: "James Taylor", role: "Client Relations", image: "/images/p20.jpg?height=400&width=400"},
+              
             ].map((member, index) => (
               <div
                 key={index}

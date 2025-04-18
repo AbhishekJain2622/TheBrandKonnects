@@ -16,6 +16,24 @@ export default function Home() {
   const clientsRef = useRef(null)
   const aboutRef = useRef(null)
 
+
+
+
+
+
+
+  const clients = [
+    { src: "/images/p15.jpg", alt: "Client 1" },
+    { src: "/images/p16.jpg", alt: "Client 2" },
+    { src: "/images/p17.jpg", alt: "Client 3" },
+    { src: "/images/p18.jpg", alt: "Client 4" },
+    { src: "/images/p19.jpg", alt: "Client 5" },
+    // { src: "/images/p20.jpg", alt: "Client 6" },
+    // { src: "/images/p21.jpg", alt: "Client 7" },
+    // { src: "/images/client8.png", alt: "Client 8" },
+    // { src: "/images/client9.png", alt: "Client 9" },
+    // { src: "/images/client10.png", alt: "Client 10" },
+  ];
   // Service cards data
   const serviceCards = [
     {
@@ -257,7 +275,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative bg-gradient-to-r from-maroon-900 to-maroon-800 text-white">
-        <div className="absolute inset-0 opacity-20 bg-[url('/images/b4.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('/B02.jpg')] bg-cover bg-center"></div>
         <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
           <div className="max-w-3xl hero-text">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Elevate Your Brand With Strategic Marketing</h1>
@@ -342,7 +360,7 @@ export default function Home() {
             </div>
             <div className="about-image">
               <Image
-                src="/b6.jpg"
+                src="/B1.jpg"
                 alt="Brand Konnects Team"
                 width={600}
                 height={400}
@@ -376,7 +394,7 @@ export default function Home() {
                 {service.image && (
                   <div className="mb-4 overflow-hidden rounded-lg">
                     <Image
-                      src="/b"
+                      src="/B2.jpg"
                       alt={service.title}
                       width={400}
                       height={200}
@@ -470,31 +488,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clients Section */}
-      <section ref={clientsRef} className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Clients</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
-              We've had the privilege of working with amazing brands across industries.
-            </p>
-          </div>
+      {/* Clients Section
+      <section ref={clientsRef} className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Clients</h2>
+      <p className="text-slate-600 max-w-2xl mx-auto">
+        We've had the privilege of working with amazing brands across industries.
+      </p>
+    </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="client-logo flex justify-center">
-                <Image
-                  src="/placeholder.svg?height=60&width=120"
-                  alt={`Client ${i}`}
-                  width={120}
-                  height={60}
-                  className="opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </div>
-            ))}
-          </div>
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+      {clients.map((client, index) => (
+        <div key={index} className="flex justify-center">
+          <Image
+            src={client.src}
+            alt={client.alt}
+            width={128}
+            height={80}
+            className="opacity-70 hover:opacity-100 transition-opacity object-cover"
+          />
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section> */}
+
 
       {/* CTA Section */}
       <section className="py-20 bg-maroon-900 text-white">
