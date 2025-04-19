@@ -474,8 +474,7 @@ export default function Home() {
         "/images/garlley/11.jpg",
         "/images/garlley/12.jpg",
         "/images/garlley/13.jpg",
-        "/images/garlley/14.jpg",
-        "/images/garlley/15.jpg",
+        "/images/garlley/14.jpg"
         // "/images/garlley16.jpg",
         // "/images/gallery5.jpg",
         // "/images/gallery6.jpg",
