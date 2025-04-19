@@ -159,7 +159,7 @@ export default function Services() {
             <div className="inline-block bg-maroon-100 text-maroon-900 px-4 py-1 rounded-full text-sm font-medium mb-4">
               What We Offer
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Marketing Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Comprehensive Marketing Solutions</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               We provide end-to-end services to help your brand stand out, connect with your audience, and achieve your
               business goals.
@@ -529,7 +529,7 @@ export default function Services() {
             <div className="inline-block bg-maroon-100 text-maroon-900 px-4 py-1 rounded-full text-sm font-medium mb-4">
               Our Approach
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Proven Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Proven Process</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               We follow a systematic approach to ensure successful outcomes for every project.
             </p>
@@ -784,7 +784,7 @@ export default function Services() {
             <div className="inline-block bg-maroon-100 text-maroon-900 px-4 py-1 rounded-full text-sm font-medium mb-4">
               Client Success Stories
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">What Our Clients Say</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               Don't just take our word for it. Here's what our clients have to say about working with Brand Konnects.
             </p>

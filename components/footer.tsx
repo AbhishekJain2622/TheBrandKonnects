@@ -15,7 +15,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
-                src="/images/brand-konnects-logo.png"
+                src="/Logo.png"
                 alt="Brand Konnects Logo"
                 width={180}
                 height={60}
@@ -134,9 +134,14 @@ export default function Footer() {
                 <span className="text-slate-400">+91 99203 55135</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={20} className="text-orange-600 flex-shrink-0" />
-                <span className="text-slate-400">konnect@brandkonnects.com</span>
-              </li>
+  <Mail size={20} className="text-orange-600 flex-shrink-0" />
+  <a
+    href="mailto:konnect@brandkonnects.com"
+    className="text-slate-400 hover:text-orange-600 transition-colors"
+  >
+    konnect@brandkonnects.com
+  </a>
+</li>
             </ul>
           </div>
         </div>

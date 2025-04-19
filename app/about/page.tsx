@@ -111,7 +111,7 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="story-content">
-              <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+              <h2 className="text-3xl font-bold mb-6 text-black">Our Story</h2>
               <p className="text-slate-600 mb-4">
                 Brand Konnects was founded in 2013 with a simple mission: to help businesses create meaningful
                 connections with their audience through strategic marketing and unforgettable events.
@@ -136,7 +136,7 @@ export default function About() {
             </div>
             <div className="story-image">
               <Image
-                src="/b3.jpg"
+                src="/B3.jpg"
                 alt="Brand Konnects Team"
                 width={600}
                 height={400}
@@ -151,7 +151,7 @@ export default function About() {
       <section ref={valuesRef} className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Values</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               These core principles guide everything we do at Brand Konnects.
             </p>

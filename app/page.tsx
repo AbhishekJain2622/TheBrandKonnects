@@ -312,7 +312,7 @@ export default function Home() {
               <div className="inline-block bg-maroon-100 text-maroon-900 px-4 py-1 rounded-full text-sm font-medium mb-4">
                 About Us
               </div>
-              <h2 className="text-3xl font-bold mb-6">We Connect Brands With Their Audience</h2>
+              <h2 className="text-3xl font-bold mb-6 text-black">We Connect Brands With Their Audience</h2>
               <p className="text-slate-600 mb-4">
                 Brand Konnects was founded with a simple mission: to help businesses create meaningful connections with
                 their audience through strategic marketing and unforgettable events.
@@ -378,10 +378,10 @@ export default function Home() {
       <section ref={servicesRef} className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="inline-block bg-maroon-100 text-maroon-900 px-4 py-1 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block text-black bg-maroon-100 text-maroon-900 px-4 py-1 rounded-full text-sm font-medium mb-4">
               What We Offer
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4  text-black" >Our Services</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               We offer comprehensive marketing and event solutions tailored to your brand's unique needs.
             </p>
@@ -447,6 +447,53 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+
+      <section className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4  text-black">Gallery</h2>
+      <p className="text-slate-600 max-w-2xl mx-auto">
+        Explore our recent projects and events through our visual showcase.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {[
+        "/images/garlley/1.jpg",
+        "/images/garlley/2.jpg",
+        "/images/garlley/3.jpg",
+        "/images/garlley/4.jpg",
+        "/images/garlley/5.jpg",
+        "/images/garlley/6.jpg",
+        "/images/garlley/7.jpg",
+        "/images/garlley/8.jpg",
+        "/images/garlley/9.jpg",
+        "/images/garlley/10.jpg",
+        "/images/garlley/11.jpg",
+        "/images/garlley/12.jpg",
+        "/images/garlley/13.jpg",
+        "/images/garlley/14.jpg",
+        "/images/garlley/15.jpg",
+        // "/images/garlley16.jpg",
+        // "/images/gallery5.jpg",
+        // "/images/gallery6.jpg",
+      ].map((src, index) => (
+        <div key={index} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+          <Image
+            src={src}
+            alt={`Gallery image ${index + 1}`}
+            width={600}
+            height={400}
+            className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Stats Section */}
       <section ref={statsRef} className="py-20 bg-white">
