@@ -42,14 +42,32 @@ const theme = createTheme({
     h1: {
       fontWeight: 800,
       lineHeight: 1.2,
+      fontSize: "3rem",
+      "@media (max-width:600px)": {
+        fontSize: "2.2rem",
+      },
     },
     h2: {
       fontWeight: 700,
       lineHeight: 1.3,
+      fontSize: "2.5rem",
+      "@media (max-width:600px)": {
+        fontSize: "1.8rem",
+      },
     },
     h3: {
       fontWeight: 600,
       lineHeight: 1.4,
+      fontSize: "2rem",
+      "@media (max-width:600px)": {
+        fontSize: "1.5rem",
+      },
+    },
+    h5: {
+      fontSize: "1.25rem",
+      "@media (max-width:600px)": {
+        fontSize: "1.1rem",
+      },
     },
   },
   components: {
@@ -65,6 +83,10 @@ const theme = createTheme({
           "&:hover": {
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
             transform: "translateY(-2px)",
+          },
+          "@media (max-width:600px)": {
+            padding: "10px 16px",
+            fontSize: "0.9rem",
           },
         },
       },
@@ -257,7 +279,7 @@ export default function Contact() {
           ref={heroRef}
           sx={{ 
             bgcolor: "#F9FAFB", 
-            py: { xs: 8, md: 12 },
+            py: { xs: 6, md: 12 },
             position: "relative",
             overflow: "hidden",
             "&::before": {
@@ -265,7 +287,7 @@ export default function Contact() {
               position: "absolute",
               top: 0,
               right: 0,
-              width: "40%",
+              width: { xs: "100%", md: "40%" },
               height: "100%",
               background: "radial-gradient(circle, rgba(252,111,31,0.1) 0%, rgba(252,111,31,0) 70%)",
               zIndex: 0,
@@ -279,20 +301,21 @@ export default function Contact() {
               alignItems: "center",
               textAlign: "center",
             }}>
-              <MessageCircle size={64} color="#FC6F1F" className="floating-icon" />
+              <MessageCircle size={isMobile ? 48 : 64} color="#FC6F1F" className="floating-icon" />
               <Typography
                 variant="h1"
                 component="h1"
                 sx={{
                   fontWeight: 800,
                   mb: 3,
-                  fontSize: { xs: "2.5rem", md: "3.75rem" },
+                  fontSize: { xs: "2.2rem", sm: "2.5rem", md: "3.75rem" },
                   color: "#510A1C",
                   background: "linear-gradient(to right, #510A1C, #FC6F1F)",
                   WebkitBackgroundClip: "text",
                   backgroundClip: "text",
                   color: "transparent",
                   maxWidth: "800px",
+                  px: { xs: 2, md: 0 },
                 }}
               >
                 Let's Connect and Create Something Amazing
@@ -305,6 +328,7 @@ export default function Contact() {
                   mx: "auto",
                   color: "text.secondary",
                   mb: 6,
+                  px: { xs: 2, md: 0 },
                 }}
               >
                 Whether you have a question about our services, want to discuss a project, or just say hello—we're here to help!
@@ -317,7 +341,7 @@ export default function Contact() {
                 size="large"
                 sx={{
                   px: 6,
-                  fontSize: "1.1rem",
+                  fontSize: { xs: "1rem", md: "1.1rem" },
                 }}
               >
                 Send Us a Message
@@ -331,7 +355,7 @@ export default function Contact() {
           id="contact-form"
           maxWidth="lg" 
           sx={{ 
-            py: { xs: 8, md: 12 },
+            py: { xs: 6, md: 12 },
             position: "relative",
           }}
         >
@@ -348,7 +372,7 @@ export default function Contact() {
             display: { xs: "none", md: "block" },
           }} />
           
-          <Grid container spacing={6} position="relative" zIndex={1}>
+          <Grid container spacing={{ xs: 4, md: 6 }} position="relative" zIndex={1}>
             {/* Contact Form */}
             <Grid item xs={12} md={6}>
               <Paper
@@ -370,8 +394,8 @@ export default function Contact() {
                   mb: 4,
                 }}>
                   <Box sx={{
-                    width: 60,
-                    height: 60,
+                    width: { xs: 50, md: 60 },
+                    height: { xs: 50, md: 60 },
                     borderRadius: "12px",
                     bgcolor: "rgba(252, 111, 31, 0.1)",
                     display: "flex",
@@ -379,7 +403,7 @@ export default function Contact() {
                     justifyContent: "center",
                     flexShrink: 0,
                   }}>
-                    <SendIcon fontSize="large" color="secondary" />
+                    <SendIcon fontSize={isMobile ? "medium" : "large"} color="secondary" />
                   </Box>
                   <Typography
                     variant="h3"
@@ -403,7 +427,7 @@ export default function Contact() {
                 )}
 
                 <Box component="form" onSubmit={handleSubmit} noValidate>
-                  <Grid container spacing={3}>
+                  <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
                       <TextField
                         fullWidth
@@ -473,7 +497,7 @@ export default function Contact() {
                         required
                         variant="outlined"
                         multiline
-                        rows={6}
+                        rows={isMobile ? 4 : 6}
                         InputLabelProps={{ shrink: true }}
                       />
                     </Grid>
@@ -489,7 +513,7 @@ export default function Contact() {
                       mt: 4,
                       width: "100%",
                       py: 2,
-                      fontSize: "1.1rem",
+                      fontSize: { xs: "1rem", md: "1.1rem" },
                     }}
                   >
                     Send Message
@@ -508,8 +532,8 @@ export default function Contact() {
                   mb: 4,
                 }}>
                   <Box sx={{
-                    width: 60,
-                    height: 60,
+                    width: { xs: 50, md: 60 },
+                    height: { xs: 50, md: 60 },
                     borderRadius: "12px",
                     bgcolor: "rgba(81, 10, 28, 0.1)",
                     display: "flex",
@@ -517,7 +541,7 @@ export default function Contact() {
                     justifyContent: "center",
                     flexShrink: 0,
                   }}>
-                    <MapPin size={32} color="#510A1C" />
+                    <MapPin size={isMobile ? 24 : 32} color="#510A1C" />
                   </Box>
                   <Typography
                     variant="h3"
@@ -537,7 +561,7 @@ export default function Contact() {
                     color: "text.secondary", 
                     mb: 5, 
                     lineHeight: 1.7,
-                    fontSize: "1.1rem",
+                    fontSize: { xs: "1rem", md: "1.1rem" },
                   }}
                 >
                   Have questions or want to discuss a project? Reach out through any of these channels and our team will be happy to assist you.
@@ -554,7 +578,7 @@ export default function Contact() {
                     sx={{ 
                       display: "flex", 
                       gap: 3,
-                      p: 3,
+                      p: { xs: 2, md: 3 },
                       borderRadius: "12px",
                       bgcolor: "rgba(249, 250, 251, 0.7)",
                       border: "1px solid #E5E7EB",
@@ -562,8 +586,8 @@ export default function Contact() {
                   >
                     <Box
                       sx={{
-                        width: 60,
-                        height: 60,
+                        width: { xs: 50, md: 60 },
+                        height: { xs: 50, md: 60 },
                         borderRadius: "12px",
                         bgcolor: "rgba(252, 111, 31, 0.1)",
                         display: "flex",
@@ -572,16 +596,14 @@ export default function Contact() {
                         flexShrink: 0,
                       }}
                     >
-                      <MapPin size={28} color="#FC6F1F" className="floating-icon" />
+                      <MapPin size={isMobile ? 22 : 28} color="#FC6F1F" className="floating-icon" />
                     </Box>
                     <Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, mb: 1, color: "#510A1C" }}>
                         Our Location
                       </Typography>
-                      <Typography variant="body1" sx={{ color: "text.secondary" }}>
-                        123 Business Avenue, Suite 500
-                        <br />
-                        New York, NY 10001
+                      <Typography variant="body1" sx={{ color: "text.secondary", fontSize: { xs: "0.9rem", md: "1rem" } }}>
+                      Brand Konnects Shop No. 2 Gaurav Residency phase 2 Near RBK school
                       </Typography>
                     </Box>
                   </Box>
@@ -591,7 +613,7 @@ export default function Contact() {
                     sx={{ 
                       display: "flex", 
                       gap: 3,
-                      p: 3,
+                      p: { xs: 2, md: 3 },
                       borderRadius: "12px",
                       bgcolor: "rgba(249, 250, 251, 0.7)",
                       border: "1px solid #E5E7EB",
@@ -599,8 +621,8 @@ export default function Contact() {
                   >
                     <Box
                       sx={{
-                        width: 60,
-                        height: 60,
+                        width: { xs: 50, md: 60 },
+                        height: { xs: 50, md: 60 },
                         borderRadius: "12px",
                         bgcolor: "rgba(252, 111, 31, 0.1)",
                         display: "flex",
@@ -609,16 +631,16 @@ export default function Contact() {
                         flexShrink: 0,
                       }}
                     >
-                      <Mail size={28} color="#FC6F1F" className="floating-icon" />
+                      <Mail size={isMobile ? 22 : 28} color="#FC6F1F" className="floating-icon" />
                     </Box>
                     <Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, mb: 1, color: "#510A1C" }}>
                         Email Us
                       </Typography>
-                      <Typography variant="body1" sx={{ color: "text.secondary" }}>
-                        info@brandkonnects.com
-                        <br />
-                        support@brandkonnects.com
+                      <Typography variant="body1" sx={{ color: "text.secondary", fontSize: { xs: "0.9rem", md: "1rem" } }}>
+                      konnect@brandkonnects.com
+                        {/* <br />
+                        support@brandkonnects.com */}
                       </Typography>
                     </Box>
                   </Box>
@@ -628,7 +650,7 @@ export default function Contact() {
                     sx={{ 
                       display: "flex", 
                       gap: 3,
-                      p: 3,
+                      p: { xs: 2, md: 3 },
                       borderRadius: "12px",
                       bgcolor: "rgba(249, 250, 251, 0.7)",
                       border: "1px solid #E5E7EB",
@@ -636,8 +658,8 @@ export default function Contact() {
                   >
                     <Box
                       sx={{
-                        width: 60,
-                        height: 60,
+                        width: { xs: 50, md: 60 },
+                        height: { xs: 50, md: 60 },
                         borderRadius: "12px",
                         bgcolor: "rgba(252, 111, 31, 0.1)",
                         display: "flex",
@@ -646,16 +668,16 @@ export default function Contact() {
                         flexShrink: 0,
                       }}
                     >
-                      <Phone size={28} color="#FC6F1F" className="floating-icon" />
+                      <Phone size={isMobile ? 22 : 28} color="#FC6F1F" className="floating-icon" />
                     </Box>
                     <Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, mb: 1, color: "#510A1C" }}>
                         Call Us
                       </Typography>
-                      <Typography variant="body1" sx={{ color: "text.secondary" }}>
-                        +1 (555) 123-4567
-                        <br />
-                        Mon-Fri, 9am-6pm EST
+                      <Typography variant="body1" sx={{ color: "text.secondary", fontSize: { xs: "0.9rem", md: "1rem" } }}>
+                      +91 99203 55135
+                        {/* <br />
+                        Mon-Fri, 9am-6pm EST */}
                       </Typography>
                     </Box>
                   </Box>
@@ -665,7 +687,7 @@ export default function Contact() {
                     sx={{ 
                       display: "flex", 
                       gap: 3,
-                      p: 3,
+                      p: { xs: 2, md: 3 },
                       borderRadius: "12px",
                       bgcolor: "rgba(249, 250, 251, 0.7)",
                       border: "1px solid #E5E7EB",
@@ -673,8 +695,8 @@ export default function Contact() {
                   >
                     <Box
                       sx={{
-                        width: 60,
-                        height: 60,
+                        width: { xs: 50, md: 60 },
+                        height: { xs: 50, md: 60 },
                         borderRadius: "12px",
                         bgcolor: "rgba(252, 111, 31, 0.1)",
                         display: "flex",
@@ -683,13 +705,13 @@ export default function Contact() {
                         flexShrink: 0,
                       }}
                     >
-                      <Clock size={28} color="#FC6F1F" className="floating-icon" />
+                      <Clock size={isMobile ? 22 : 28} color="#FC6F1F" className="floating-icon" />
                     </Box>
                     <Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, mb: 1, color: "#510A1C" }}>
                         Business Hours
                       </Typography>
-                      <Typography variant="body1" sx={{ color: "text.secondary" }}>
+                      <Typography variant="body1" sx={{ color: "text.secondary", fontSize: { xs: "0.9rem", md: "1rem" } }}>
                         Monday - Friday: 9:00 AM - 6:00 PM
                         <br />
                         Saturday: 10:00 AM - 2:00 PM
@@ -710,7 +732,7 @@ export default function Contact() {
                   <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: "#510A1C" }}>
                     Join Our Team
                   </Typography>
-                  <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
+                  <Typography variant="body1" sx={{ color: "text.secondary", mb: 3, fontSize: { xs: "0.9rem", md: "1rem" } }}>
                     We're always looking for talented individuals to join our growing team. Check out our current openings.
                   </Typography>
                   <Button
@@ -738,7 +760,7 @@ export default function Contact() {
 
         {/* Map Section */}
         <Box sx={{ 
-          py: { xs: 6, md: 10 },
+          py: { xs: 4, md: 10 },
           bgcolor: "white", 
           width: "100%",
           position: "relative",
@@ -750,7 +772,7 @@ export default function Contact() {
               flexDirection: "column",
               alignItems: "center",
               textAlign: "center",
-              mb: { xs: 4, md: 6 },
+              mb: { xs: 3, md: 6 },
             }}>
               <Typography
                 variant="h2"
@@ -781,6 +803,7 @@ export default function Contact() {
                 sx={{ 
                   maxWidth: 600,
                   color: "text.secondary",
+                  px: { xs: 2, md: 0 },
                 }}
               >
                 Come see us in person at our headquarters in New York City
@@ -788,7 +811,7 @@ export default function Contact() {
             </Box>
             <Box
               sx={{
-                height: { xs: 300, md: 500 },
+                height: { xs: 300, sm: 400, md: 500 },
                 width: "100%",
                 borderRadius: "16px",
                 overflow: "hidden",
@@ -812,16 +835,17 @@ export default function Contact() {
                 left: "50%",
                 transform: "translateX(-50%)",
                 bgcolor: "white",
-                px: 3,
-                py: 2,
+                px: { xs: 2, md: 3 },
+                py: { xs: 1, md: 2 },
                 borderRadius: "12px",
                 boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
                 display: "flex",
                 alignItems: "center",
                 gap: 1,
+                maxWidth: { xs: "90%", md: "auto" },
               }}>
-                <MapPin size={20} color="#FC6F1F" />
-                <Typography variant="body2" fontWeight={600}>
+                <MapPin size={isMobile ? 16 : 20} color="#FC6F1F" />
+                <Typography variant="body2" fontWeight={600} sx={{ fontSize: { xs: "0.75rem", md: "0.875rem" } }}>
                   123 Business Avenue, New York, NY 10001
                 </Typography>
               </Box>
@@ -863,8 +887,9 @@ export default function Contact() {
                 sx={{ 
                   fontWeight: 800, 
                   mb: 3,
-                  fontSize: { xs: "2.25rem", md: "3rem" },
+                  fontSize: { xs: "2rem", sm: "2.25rem", md: "3rem" },
                   color: "white",
+                  px: { xs: 2, md: 0 },
                 }}
               >
                 Ready to Elevate Your Brand?
@@ -876,11 +901,18 @@ export default function Contact() {
                   mx: "auto",
                   mb: 6,
                   color: "rgba(255, 255, 255, 0.9)",
+                  px: { xs: 2, md: 0 },
                 }}
               >
                 Let's create something extraordinary together. Schedule a free consultation with our experts today.
               </Typography>
-              <Box sx={{ display: "flex", gap: 3 }}>
+              <Box sx={{ 
+                display: "flex", 
+                gap: 3,
+                flexDirection: { xs: "column", sm: "row" },
+                width: { xs: "100%", sm: "auto" },
+                px: { xs: 2, sm: 0 },
+              }}>
                 <Button
                   component={Link}
                   href="/consultation"
@@ -890,7 +922,8 @@ export default function Contact() {
                   endIcon={<ArrowRight size={20} />}
                   sx={{
                     px: 6,
-                    fontSize: "1.1rem",
+                    fontSize: { xs: "1rem", md: "1.1rem" },
+                    width: { xs: "100%", sm: "auto" },
                   }}
                 >
                   Book a Consultation
@@ -903,12 +936,13 @@ export default function Contact() {
                   size="large"
                   sx={{
                     px: 6,
-                    fontSize: "1.1rem",
+                    fontSize: { xs: "1rem", md: "1.1rem" },
                     borderWidth: "2px",
                     "&:hover": {
                       borderWidth: "2px",
                       bgcolor: "rgba(255, 255, 255, 0.1)",
                     },
+                    width: { xs: "100%", sm: "auto" },
                   }}
                 >
                   Explore Services

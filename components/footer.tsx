@@ -26,22 +26,22 @@ export default function Footer() {
               Innovative marketing solutions and unforgettable events that drive results for your brand.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-slate-400 hover:text-orange-600 transition-colors">
+              <a href="https://www.facebook.com/people/Brand-Konnects/61575534807267/" className="text-slate-400 hover:text-orange-600 transition-colors">
                 <FacebookIcon fontSize="medium" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-slate-400 hover:text-orange-600 transition-colors">
+              {/* <a href="#" className="text-slate-400 hover:text-orange-600 transition-colors">
                 <TwitterIcon fontSize="medium" />
                 <span className="sr-only">Twitter</span>
-              </a>
-              <a href="#" className="text-slate-400 hover:text-orange-600 transition-colors">
+              </a> */}
+              <a href="https://www.instagram.com/brand.konnects" className="text-slate-400 hover:text-orange-600 transition-colors">
                 <InstagramIcon fontSize="medium" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="#" className="text-slate-400 hover:text-orange-600 transition-colors">
+              {/* <a href="#" className="text-slate-400 hover:text-orange-600 transition-colors">
                 <LinkedInIcon fontSize="medium" />
                 <span className="sr-only">LinkedIn</span>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -126,18 +126,16 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-orange-600 flex-shrink-0 mt-1" />
                 <span className="text-slate-400">
-                  123 Business Avenue, Suite 500
-                  <br />
-                  New York, NY 10001
+                Brand Konnects Shop No. 2 Gaurav Residency phase 2 Near RBK school
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-orange-600 flex-shrink-0" />
-                <span className="text-slate-400">+1 (555) 123-4567</span>
+                <span className="text-slate-400">+91 99203 55135</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-orange-600 flex-shrink-0" />
-                <span className="text-slate-400">info@brandkonnects.com</span>
+                <span className="text-slate-400">konnect@brandkonnects.com</span>
               </li>
             </ul>
           </div>
