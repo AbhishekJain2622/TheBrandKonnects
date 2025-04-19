@@ -449,11 +449,10 @@ export default function Home() {
       </section>
 
 
-
       <section className="py-20 bg-white">
   <div className="container mx-auto px-4">
     <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4  text-black">Gallery</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Gallery</h2>
       <p className="text-slate-600 max-w-2xl mx-auto">
         Explore our recent projects and events through our visual showcase.
       </p>
@@ -467,19 +466,14 @@ export default function Home() {
         "/images/garlley/4.jpg",
         "/images/garlley/5.jpg",
         "/images/garlley/6.jpg",
-        "/images/garlley/7.jpg",
-        "/images/garlley/8.jpg",
-        "/images/garlley/9.jpg",
-        "/images/garlley/10.jpg",
-        "/images/garlley/11.jpg",
-        "/images/garlley/12.jpg",
-        "/images/garlley/13.jpg",
-        "/images/garlley/14.jpg"
-        // "/images/garlley16.jpg",
-        // "/images/gallery5.jpg",
-        // "/images/gallery6.jpg",
       ].map((src, index) => (
-        <div key={index} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+        <Link
+          key={index}
+          href={src}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow"
+        >
           <Image
             src={src}
             alt={`Gallery image ${index + 1}`}
@@ -487,11 +481,22 @@ export default function Home() {
             height={400}
             className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
           />
-        </div>
+        </Link>
       ))}
+    </div>
+
+    {/* View More Button */}
+    <div className="mt-10 text-center">
+      <Link
+        href="/garlley"
+        className="bg-maroon-900 hover:bg-maroon-800 text-white px-8 py-3 rounded-md font-medium inline-flex items-center gap-2 transition-all hover:gap-3"
+      >
+        View More <ArrowRight size={18} />
+      </Link>
     </div>
   </div>
 </section>
+
 
 
       {/* Stats Section */}

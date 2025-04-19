@@ -70,6 +70,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/garlley" className="text-slate-400 hover:text-orange-600 transition-colors">
+                Garllery
+                </Link>
+              </li>
+              <li>
                 <Link href="#" className="text-slate-400 hover:text-orange-600 transition-colors">
                   Blog
                 </Link>
