@@ -153,7 +153,7 @@ export default function About() {
         "/images/garlley/31.jpeg",
         "/images/garlley/32.jpeg",
         "/images/garlley/33.jpeg",
-        "/images/garlley/34.jpeg"
+        // "/images/garlley/34.jpeg"
       
       ].map((src, index) => (
         <div key={index} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow">

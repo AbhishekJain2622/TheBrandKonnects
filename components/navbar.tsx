@@ -51,7 +51,7 @@ export default function Navbar() {
             alt="Brand Konnects Logo"
             width={150}
             height={50}
-            className="h-12 w-auto"
+              className="h-18 w-40"
           />
         </Link>
 
