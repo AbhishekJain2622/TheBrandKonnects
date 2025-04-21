@@ -56,7 +56,7 @@ export default function Home() {
       title: "Brand Strategy",
       description: "Develop a compelling brand identity and strategy that resonates with your target audience.",
       features: ["Brand Positioning", "Market Research", "Competitive Analysis"],
-      image: "/images/b7.jpg", // Image for the service
+      image: "/images/b7.webp", // Image for the service
     },
     {
       icon: (
@@ -78,7 +78,7 @@ export default function Home() {
       title: "Event Management",
       description: "Create memorable experiences with our end-to-end event planning and execution services.",
       features: ["Corporate Events", "Product Launches", "Trade Shows"],
-      image: "/images/b1.jpg", // Image for the service
+      image: "/images/b1.webp", // Image for the service
     },
     
     {
@@ -101,7 +101,7 @@ export default function Home() {
       title: "Digital Marketing",
       description: "Boost your online presence with our comprehensive digital marketing strategies.",
       features: ["Social Media Marketing", "SEO Optimization", "Content Strategy"],
-      image: "/images/b6.jpg", // Image for the service
+      image: "/images/b6.webp", // Image for the service
     },
     {
       icon: (
@@ -127,7 +127,7 @@ export default function Home() {
       title: "Corporate Gifting",
       description: "Create memorable impressions with thoughtful, branded gifts for clients and partners.",
       features: ["Custom Gift Curation", "Branded Merchandise", "Gift Packaging"],
-      image: "/images/b2.jpg", // Image for the service
+      image: "/images/b2.webp", // Image for the service
     },
     {
       icon: (
@@ -149,7 +149,7 @@ export default function Home() {
       title: "Custom Fabrication",
       description: "Bring your brand to life with custom-built displays, signage, and installations.",
       features: ["Exhibition Booths", "Custom Signage", "Retail Environments"],
-      image: "/images/b3.jpg", // Image for the service
+      image: "/images/b3.webp", // Image for the service
     },
     {
       icon: (
@@ -173,7 +173,7 @@ export default function Home() {
       title: "Print Solutions",
       description: "High-quality printing services for all your marketing materials and brand collateral.",
       features: ["Marketing Collateral", "Large Format Printing", "Promotional Materials"],
-      image: "/images/b4.jpg", // Image for the service
+      image: "/images/b4.webp", // Image for the service
     },
   ];
   
@@ -278,7 +278,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative bg-gradient-to-r from-maroon-900 to-maroon-800 text-white">
-        <div className="absolute inset-0 opacity-20 bg-[url('/B02.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('/B02.webp')] bg-cover bg-center"></div>
         <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
           <div className="max-w-3xl hero-text">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Elevate Your Brand With Strategic Marketing</h1>
@@ -363,7 +363,7 @@ export default function Home() {
             </div>
             <div className="about-image">
               <Image
-                src="/B1.jpg"
+                src="/B1.webp"
                 alt="Brand Konnects Team"
                 width={600}
                 height={400}
@@ -460,12 +460,12 @@ export default function Home() {
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {[
-        "/images/garlley/1.jpg",
-        "/images/garlley/2.jpg",
-        "/images/garlley/3.jpg",
-        "/images/garlley/4.jpg",
-        "/images/garlley/5.jpg",
-        "/images/garlley/6.jpg",
+        "/images/garlley/1.webp",
+        "/images/garlley/2.webp",
+        "/images/garlley/3.webp",
+        "/images/garlley/4.webp",
+        "/images/garlley/5.webp",
+        "/images/garlley/6.webp",
       ].map((src, index) => (
         <Link
           key={index}

@@ -93,7 +93,7 @@ export default function About() {
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative bg-maroon-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0 opacity-20 bg-[url('/B03.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('/B03.webp')] bg-cover bg-center"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center about-hero-text">
             <h1 className="text-4xl md:text-5xl font-bold mb-6"> Our Gallery</h1>
@@ -120,40 +120,40 @@ export default function About() {
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {[
-        "/images/garlley/1.jpg",
-        "/images/garlley/2.jpg",
-        "/images/garlley/3.jpg",
-        "/images/garlley/4.jpg",
-        "/images/garlley/5.jpg",
-        "/images/garlley/6.jpg",
-        "/images/garlley/7.jpg",
-        "/images/garlley/8.jpg",
-        "/images/garlley/9.jpg",
-        "/images/garlley/10.jpg",
-        "/images/garlley/11.jpg",
-        "/images/garlley/12.jpg",
-        "/images/garlley/13.jpg",
-        "/images/garlley/14.jpg",
-        "/images/garlley/15.jpeg",
-        "/images/garlley/16.jpeg",
-        "/images/garlley/17.jpeg",
-        "/images/garlley/18.jpeg",
-        "/images/garlley/19.jpeg",
-        "/images/garlley/20.jpeg",
-        "/images/garlley/21.jpeg",
-        "/images/garlley/22.jpeg",
-        "/images/garlley/23.jpeg",
-        "/images/garlley/24.jpeg",
-        "/images/garlley/25.jpeg",
-        "/images/garlley/26.jpeg",
-        "/images/garlley/27.jpeg",
-        "/images/garlley/28.jpeg",
-        "/images/garlley/29.jpeg",
-        "/images/garlley/30.jpeg",
-        "/images/garlley/31.jpeg",
-        "/images/garlley/32.jpeg",
-        "/images/garlley/33.jpeg",
-        // "/images/garlley/34.jpeg"
+        "/images/garlley/1.",
+        "/images/garlley/2.webp",
+        "/images/garlley/3.webp",
+        "/images/garlley/4.webp",
+        "/images/garlley/5.webp",
+        "/images/garlley/6.webp",
+        "/images/garlley/7.webp",
+        "/images/garlley/8.webp",
+        "/images/garlley/9.webp",
+        "/images/garlley/10.webp",
+        "/images/garlley/11.webp",
+        "/images/garlley/12.webp",
+        "/images/garlley/13.webp",
+        "/images/garlley/14.webp",
+        "/images/garlley/15.webp",
+        "/images/garlley/16.webp",
+        "/images/garlley/17.webp",
+        "/images/garlley/18.webp",
+        "/images/garlley/19.webp",
+        "/images/garlley/20.webp",
+        "/images/garlley/21.webp",
+        "/images/garlley/22.webp",
+        "/images/garlley/23.webp",
+        "/images/garlley/24.webp",
+        "/images/garlley/25.webp",
+        "/images/garlley/26.webp",
+        "/images/garlley/27.webp",
+        "/images/garlley/28.webp",
+        "/images/garlley/29.webp",
+        "/images/garlley/30.webp",
+        "/images/garlley/31.webp",
+        "/images/garlley/32.webp",
+        "/images/garlley/33.webp",
+        // "/images/garlley/34.webp"
       
       ].map((src, index) => (
         <div key={index} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow">

@@ -15,11 +15,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
-                src="/Logo.png"
+                src="/brand-konnects-logo.png"
                 alt="Brand Konnects Logo"
                 width={180}
                 height={60}
-                className="h-12 w-auto"
+                className="h-15 w-28"
               />
             </Link>
             <p className="text-slate-400 mb-6">
@@ -71,7 +71,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/garlley" className="text-slate-400 hover:text-orange-600 transition-colors">
-                Garllery
+                Gallery
                 </Link>
               </li>
               <li>

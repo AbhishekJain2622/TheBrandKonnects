@@ -93,7 +93,7 @@ export default function About() {
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative bg-maroon-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0 opacity-20 bg-[url('/B03.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('/B03.webp')] bg-cover bg-center"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center about-hero-text">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Brand Konnects</h1>
@@ -136,7 +136,7 @@ export default function About() {
             </div>
             <div className="story-image">
               <Image
-                src="/B3.jpg"
+                src="/B3.webp"
                 alt="Brand Konnects Team"
                 width={600}
                 height={400}

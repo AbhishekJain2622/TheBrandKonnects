@@ -171,7 +171,7 @@ export default function Services() {
             <div className="service-card bg-white p-8 rounded-xl shadow-md hover:shadow-xl border border-slate-100 transition-all">
               <div className="mb-4 overflow-hidden rounded-lg">
                 <Image
-                  src="/B4.jpg"
+                  src="/B4.webp"
                   alt="Brand Strategy & Identity"
                   width={400}
                   height={200}
@@ -212,7 +212,7 @@ export default function Services() {
             <div className="service-card bg-white p-8 rounded-xl shadow-md hover:shadow-xl border border-slate-100 transition-all">
               <div className="mb-4 overflow-hidden rounded-lg">
                 <Image
-                  src="/B5.jpg"
+                  src="/B5.webp"
                   alt="Digital Marketing"
                   width={400}
                   height={200}
@@ -252,7 +252,7 @@ export default function Services() {
             <div className="service-card bg-white p-8 rounded-xl shadow-md hover:shadow-xl border border-slate-100 transition-all">
               <div className="mb-4 overflow-hidden rounded-lg">
                 <Image
-                  src="/B7.jpg"
+                  src="/B7.webp"
                   alt="Event Management"
                   width={400}
                   height={200}
@@ -794,7 +794,7 @@ export default function Services() {
             <div className="testimonial-card bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
               <div className="flex items-center mb-6">
                 <Image
-                  src="/images/p15.jpg"
+                  src="/images/p15.webp"
                   alt="Client"
                   width={60}
                   height={60}
@@ -831,7 +831,7 @@ export default function Services() {
             <div className="testimonial-card bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
               <div className="flex items-center mb-6">
                 <Image  
-                  src="/images/p16.jpg"
+                  src="/images/p16.webp"
                   alt="Client"
                   width={60}
                   height={60}
@@ -868,7 +868,7 @@ export default function Services() {
             <div className="testimonial-card bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
               <div className="flex items-center mb-6">
                 <Image
-                  src="/images/p17.jpg"
+                  src="/images/p17.webp"
                   alt="Client"
                   width={60}
                   height={60}
