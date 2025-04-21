@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { gsap } from "gsap"
@@ -16,11 +16,28 @@ export default function Home() {
   const clientsRef = useRef(null)
   const aboutRef = useRef(null)
 
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const galleryImages = [
+    "/images/garlley/1.webp",
+    "/images/garlley/2.webp",
+    "/images/garlley/3.webp",
+    "/images/garlley/4.webp",
+    "/images/garlley/5.webp",
+    "/images/garlley/6.webp",
+  ];
 
+  const openLightbox = (src) => {
+    setSelectedImage(src);
+    setIsOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
 
-
-
+  const closeLightbox = () => {
+    setIsOpen(false);
+    document.body.style.overflow = 'auto';
+  };
 
   const clients = [
     { src: "/images/p15.jpg", alt: "Client 1" },
@@ -28,12 +45,8 @@ export default function Home() {
     { src: "/images/p17.jpg", alt: "Client 3" },
     { src: "/images/p18.jpg", alt: "Client 4" },
     { src: "/images/p19.jpg", alt: "Client 5" },
-    // { src: "/images/p20.jpg", alt: "Client 6" },
-    // { src: "/images/p21.jpg", alt: "Client 7" },
-    // { src: "/images/client8.png", alt: "Client 8" },
-    // { src: "/images/client9.png", alt: "Client 9" },
-    // { src: "/images/client10.png", alt: "Client 10" },
   ];
+
   // Service cards data
   const serviceCards = [
     {
@@ -56,7 +69,7 @@ export default function Home() {
       title: "Brand Strategy",
       description: "Develop a compelling brand identity and strategy that resonates with your target audience.",
       features: ["Brand Positioning", "Market Research", "Competitive Analysis"],
-      image: "/images/b7.webp", // Image for the service
+      image: "/images/b7.webp",
     },
     {
       icon: (
@@ -78,9 +91,8 @@ export default function Home() {
       title: "Event Management",
       description: "Create memorable experiences with our end-to-end event planning and execution services.",
       features: ["Corporate Events", "Product Launches", "Trade Shows"],
-      image: "/images/b1.webp", // Image for the service
+      image: "/images/b1.webp",
     },
-    
     {
       icon: (
         <svg
@@ -101,7 +113,7 @@ export default function Home() {
       title: "Digital Marketing",
       description: "Boost your online presence with our comprehensive digital marketing strategies.",
       features: ["Social Media Marketing", "SEO Optimization", "Content Strategy"],
-      image: "/images/b6.webp", // Image for the service
+      image: "/images/b6.webp",
     },
     {
       icon: (
@@ -127,7 +139,7 @@ export default function Home() {
       title: "Corporate Gifting",
       description: "Create memorable impressions with thoughtful, branded gifts for clients and partners.",
       features: ["Custom Gift Curation", "Branded Merchandise", "Gift Packaging"],
-      image: "/images/b2.webp", // Image for the service
+      image: "/images/b2.webp",
     },
     {
       icon: (
@@ -149,7 +161,7 @@ export default function Home() {
       title: "Custom Fabrication",
       description: "Bring your brand to life with custom-built displays, signage, and installations.",
       features: ["Exhibition Booths", "Custom Signage", "Retail Environments"],
-      image: "/images/b3.webp", // Image for the service
+      image: "/images/b3.webp",
     },
     {
       icon: (
@@ -173,11 +185,9 @@ export default function Home() {
       title: "Print Solutions",
       description: "High-quality printing services for all your marketing materials and brand collateral.",
       features: ["Marketing Collateral", "Large Format Printing", "Promotional Materials"],
-      image: "/images/b4.webp", // Image for the service
+      image: "/images/b4.webp",
     },
   ];
-  
-  
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -226,7 +236,7 @@ export default function Home() {
         start: "top 80%",
         onEnter: () => {
           const start = 0
-          const duration = 2000 // 2 seconds
+          const duration = 2000
           const startTime = Date.now()
 
           const updateCounter = () => {
@@ -234,20 +244,15 @@ export default function Home() {
             const elapsed = currentTime - startTime
 
             if (elapsed < duration) {
-              // Calculate the current count based on elapsed time
               const progress = elapsed / duration
               const currentCount = Math.round(progress * target)
               el.textContent = currentCount.toString()
-
-              // Continue animation
               requestAnimationFrame(updateCounter)
             } else {
-              // Animation complete
               el.textContent = target.toString()
             }
           }
 
-          // Start the animation
           requestAnimationFrame(updateCounter)
         },
         once: true,
@@ -374,20 +379,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section - Redesigned */}
+      {/* Services Section */}
       <section ref={servicesRef} className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="inline-block text-black bg-maroon-100 text-maroon-900 px-4 py-1 rounded-full text-sm font-medium mb-4">
               What We Offer
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4  text-black" >Our Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Services</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               We offer comprehensive marketing and event solutions tailored to your brand's unique needs.
             </p>
           </div>
 
-          {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCards.map((service, index) => (
               <div
@@ -396,14 +400,13 @@ export default function Home() {
               >
                 {service.image && (
                   <div className="mb-4 overflow-hidden rounded-lg">
-                  <Image
-  src={service.image}
-  alt={service.title}
-  width={400}
-  height={200}
-  className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
-/>
-
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={400}
+                      height={200}
+                      className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
                   </div>
                 )}
                 <div className="flex items-start gap-4 mb-4">
@@ -436,7 +439,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* View All Services Button */}
           <div className="text-center mt-12">
             <Link
               href="/services"
@@ -448,56 +450,75 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* Gallery Section */}
       <section className="py-20 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Gallery</h2>
-      <p className="text-slate-600 max-w-2xl mx-auto">
-        Explore our recent projects and events through our visual showcase.
-      </p>
-    </div>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Gallery</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Explore our recent projects and events through our visual showcase.
+            </p>
+          </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {[
-        "/images/garlley/1.webp",
-        "/images/garlley/2.webp",
-        "/images/garlley/3.webp",
-        "/images/garlley/4.webp",
-        "/images/garlley/5.webp",
-        "/images/garlley/6.webp",
-      ].map((src, index) => (
-        <Link
-          key={index}
-          href={src}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow"
-        >
-          <Image
-            src={src}
-            alt={`Gallery image ${index + 1}`}
-            width={600}
-            height={400}
-            className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </Link>
-      ))}
-    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {galleryImages.map((src, index) => (
+              <div
+                key={index}
+                onClick={() => openLightbox(src)}
+                className="group relative block overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              >
+                <Image
+                  src={src}
+                  alt={`Gallery image ${index + 1}`}
+                  width={600}
+                  height={400}
+                  className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                  <svg
+                    className="w-10 h-10 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-4.553a1.5 1.5 0 00-2.121-2.121L12.879 7.879M9 14l-4.553 4.553a1.5 1.5 0 002.121 2.121L11.121 16.12" />
+                  </svg>
+                </div>
+              </div>
+            ))}
+          </div>
 
-    {/* View More Button */}
-    <div className="mt-10 text-center">
-      <Link
-        href="/garlley"
-        className="bg-maroon-900 hover:bg-maroon-800 text-white px-8 py-3 rounded-md font-medium inline-flex items-center gap-2 transition-all hover:gap-3"
-      >
-        View More <ArrowRight size={18} />
-      </Link>
-    </div>
-  </div>
-</section>
+          <div className="mt-10 text-center">
+            <Link
+              href="/garlley"
+              className="bg-maroon-900 hover:bg-maroon-800 text-white px-8 py-3 rounded-md font-medium inline-flex items-center gap-2 transition-all hover:gap-3"
+            >
+              View More <ArrowRight size={18} />
+            </Link>
+          </div>
 
-
+          {isOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
+              <button
+                onClick={closeLightbox}
+                className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300"
+              >
+                &times;
+              </button>
+              <div className="relative max-w-4xl w-full max-h-[90vh]">
+                <Image
+                  src={selectedImage}
+                  alt="Enlarged gallery image"
+                  width={1200}
+                  height={800}
+                  className="w-full h-full object-contain max-h-[90vh]"
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
 
       {/* Stats Section */}
       <section ref={statsRef} className="py-20 bg-white">
@@ -542,33 +563,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Clients Section
-      <section ref={clientsRef} className="py-20 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Clients</h2>
-      <p className="text-slate-600 max-w-2xl mx-auto">
-        We've had the privilege of working with amazing brands across industries.
-      </p>
-    </div>
-
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-      {clients.map((client, index) => (
-        <div key={index} className="flex justify-center">
-          <Image
-            src={client.src}
-            alt={client.alt}
-            width={128}
-            height={80}
-            className="opacity-70 hover:opacity-100 transition-opacity object-cover"
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</section> */}
-
 
       {/* CTA Section */}
       <section className="py-20 bg-maroon-900 text-white">
