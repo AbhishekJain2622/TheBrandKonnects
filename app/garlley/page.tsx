@@ -75,7 +75,7 @@ export default function About() {
       <section ref={heroRef} className="relative bg-maroon-900 text-white py-20 md:py-28">
         <div className="absolute inset-0 opacity-20 bg-[url('/B03.webp')] bg-cover bg-center blur-sm"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center about-hero-text">
+          <div className="max-w-3xl mx-auto mt-13 text-center about-hero-text">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Gallery</h1>
             <p className="text-xl mb-8 text-slate-300">
               A vibrant showcase of moments, brands, and experiences—captured and curated to inspire.

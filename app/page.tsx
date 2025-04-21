@@ -284,8 +284,8 @@ export default function Home() {
       {/* Hero Section */}
       <section ref={heroRef} className="relative bg-gradient-to-r from-maroon-900 to-maroon-800 text-white">
         <div className="absolute inset-0 opacity-20 bg-[url('/B02.webp')] bg-cover bg-center"></div>
-        <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
-          <div className="max-w-3xl hero-text">
+        <div className="container mx-auto px-4 py-24 md:py-32  relative z-10">
+          <div className="max-w-3xl mt-13 hero-text">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Elevate Your Brand With Strategic Marketing</h1>
             <p className="text-xl md:text-2xl mb-8 text-slate-300">
               Brand Konnects delivers innovative marketing solutions and unforgettable events that drive results.

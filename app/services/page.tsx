@@ -128,7 +128,7 @@ export default function Services() {
       >
         <div className="absolute inset-0 opacity-20 bg-[url('/B05.jpg')] bg-cover bg-center"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center services-hero-text">
+          <div className="max-w-3xl mx-auto text-center mt-13 services-hero-text">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
             <p className="text-xl mb-8 text-slate-200">
               Comprehensive marketing and event solutions tailored to your brand's unique needs.
