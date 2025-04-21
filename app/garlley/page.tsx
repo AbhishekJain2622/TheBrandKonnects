@@ -65,7 +65,7 @@ export default function About() {
     return () => document.removeEventListener("keydown", handleKeyDown)
   }, [])
 
-  const galleryImages = Array.from({ length: 33 }, (_, i) => `/images/garlley/${i + 1}.webp`)
+  const galleryImages = Array.from({ length: 76 }, (_, i) => `/images/garlley/${i + 1}.webp`)
 
   return (
     <main className="min-h-screen">
