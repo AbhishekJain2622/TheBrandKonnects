@@ -675,7 +675,7 @@ export default function Contact() {
                         Call Us
                       </Typography>
                       <Typography variant="body1" sx={{ color: "text.secondary", fontSize: { xs: "0.9rem", md: "1rem" } }}>
-                      +91 99203 55135
+                      +91 9769355135
                         {/* <br />
                         Mon-Fri, 9am-6pm EST */}
                       </Typography>
