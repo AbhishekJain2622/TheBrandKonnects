@@ -126,7 +126,7 @@ export default function Services() {
         ref={heroRef}
         className="relative bg-gradient-to-r from-maroon-900 to-maroon-800 text-white py-24 md:py-32"
       >
-        <div className="absolute inset-0 opacity-20 bg-[url('/B05.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('/B05.webp')] bg-cover bg-center"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center mt-13 services-hero-text">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
