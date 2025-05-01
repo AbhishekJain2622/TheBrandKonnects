@@ -131,7 +131,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-orange-600 flex-shrink-0 mt-1" />
                 <span className="text-slate-400">
-                Brand Konnects Shop No. 2 Gaurav Residency phase 2 Near RBK school
+                Brand Konnects, Shop No. 2 Gaurav Residency, Mira Road East, Thane 401107
                 </span>
               </li>
               <li className="flex items-center gap-3">

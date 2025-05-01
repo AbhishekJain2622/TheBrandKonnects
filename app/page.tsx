@@ -8,6 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ArrowRight, CheckCircle, ChevronRight, Users, Award, Target } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { Button } from "@/components/ui/button"
+import ClientCarousel from "../components/client-carousel"
 
 export default function Home() {
   const heroRef = useRef(null)
@@ -38,15 +40,13 @@ export default function Home() {
     setIsOpen(false);
     document.body.style.overflow = 'auto';
   };
-
   const clients = [
-    { src: "/images/p15.jpg", alt: "Client 1" },
-    { src: "/images/p16.jpg", alt: "Client 2" },
-    { src: "/images/p17.jpg", alt: "Client 3" },
-    { src: "/images/p18.jpg", alt: "Client 4" },
-    { src: "/images/p19.jpg", alt: "Client 5" },
+    { src: "/images/p15.webp", alt: "Client 1" },
+    { src: "/images/p16.webp", alt: "Client 2" },
+    { src: "/images/p17.webp", alt: "Client 3" },
+    { src: "/images/p18.webp", alt: "Client 4" },
+    { src: "/images/p19.webp", alt: "Client 5" },
   ];
-
   // Service cards data
   const serviceCards = [
     {
@@ -284,7 +284,7 @@ export default function Home() {
       {/* Hero Section */}
       <section ref={heroRef} className="relative bg-gradient-to-r from-maroon-900 to-maroon-800 text-white">
         <div className="absolute inset-0 opacity-20 bg-[url('/B02.webp')] bg-cover bg-center"></div>
-        <div className="container mx-auto px-4 py-24 md:py-32  relative z-10">
+        <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
           <div className="max-w-3xl mt-13 hero-text">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Elevate Your Brand With Strategic Marketing</h1>
             <p className="text-xl md:text-2xl mb-8 text-slate-300">
@@ -454,7 +454,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Gallery</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Gallery</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               Explore our recent projects and events through our visual showcase.
             </p>
@@ -475,7 +475,7 @@ export default function Home() {
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                  <svg
+                  {/* <svg
                     className="w-10 h-10 text-white"
                     fill="none"
                     stroke="currentColor"
@@ -483,7 +483,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-4.553a1.5 1.5 0 00-2.121-2.121L12.879 7.879M9 14l-4.553 4.553a1.5 1.5 0 002.121 2.121L11.121 16.12" />
-                  </svg>
+                  </svg> */}
                 </div>
               </div>
             ))}
@@ -563,6 +563,22 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Clients Section */}
+      <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="mb-12 text-center">
+          <h2 className="mb-3 text-3xl font-bold tracking-tight text-black md:text-[35px]">
+            Our Clients
+          </h2>
+          <p className="mx-auto max-w-4xl font-teko text-[15px] leading-relaxed text-black">
+            We're proud to work with businesses across various industries.
+          </p>
+        </div>
+
+        <ClientCarousel clients={clients} />
+      </div>
+    </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-maroon-900 text-white">

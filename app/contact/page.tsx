@@ -268,6 +268,7 @@ export default function Contact() {
       ease: "sine.inOut",
     })
   }, [isMobile])
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -758,100 +759,108 @@ export default function Contact() {
           </Grid>
         </Container>
 
-        {/* Map Section */}
-        <Box sx={{ 
-          py: { xs: 4, md: 10 },
-          bgcolor: "white", 
-          width: "100%",
-          position: "relative",
-          overflow: "hidden",
-        }}>
-          <Container maxWidth="lg">
-            <Box sx={{ 
-              display: "flex", 
-              flexDirection: "column",
-              alignItems: "center",
-              textAlign: "center",
-              mb: { xs: 3, md: 6 },
-            }}>
-              <Typography
-                variant="h2"
-                component="h2"
-                sx={{ 
-                  fontWeight: 700, 
-                  mb: 2, 
-                  color: "#510A1C",
-                  position: "relative",
-                  display: "inline-block",
-                  "&::after": {
-                    content: '""',
-                    position: "absolute",
-                    bottom: -8,
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    width: "80px",
-                    height: "4px",
-                    bgcolor: "#FC6F1F",
-                    borderRadius: "2px",
-                  }
-                }}
-              >
-                Visit Our Office
-              </Typography>
-              <Typography
-                variant="h6"
-                sx={{ 
-                  maxWidth: 600,
-                  color: "text.secondary",
-                  px: { xs: 2, md: 0 },
-                }}
-              >
-                Come see us in person at our headquarters in New York City
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                height: { xs: 300, sm: 400, md: 500 },
-                width: "100%",
-                borderRadius: "16px",
-                overflow: "hidden",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                position: "relative",
-              }}
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179329!2d-73.98784492423988!3d40.74844097138962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1713457264253!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-              <Box sx={{
+        <Box
+      sx={{
+        py: { xs: 4, md: 10 },
+        bgcolor: "white",
+        width: "100%",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+            mb: { xs: 3, md: 6 },
+          }}
+        >
+          <Typography
+            variant="h2"
+            component="h2"
+            sx={{
+              fontWeight: 700,
+              mb: 2,
+              color: "#510A1C",
+              position: "relative",
+              display: "inline-block",
+              "&::after": {
+                content: '""',
                 position: "absolute",
-                bottom: 20,
+                bottom: -8,
                 left: "50%",
                 transform: "translateX(-50%)",
-                bgcolor: "white",
-                px: { xs: 2, md: 3 },
-                py: { xs: 1, md: 2 },
-                borderRadius: "12px",
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                maxWidth: { xs: "90%", md: "auto" },
-              }}>
-                <MapPin size={isMobile ? 16 : 20} color="#FC6F1F" />
-                <Typography variant="body2" fontWeight={600} sx={{ fontSize: { xs: "0.75rem", md: "0.875rem" } }}>
-                  123 Business Avenue, New York, NY 10001
-                </Typography>
-              </Box>
-            </Box>
-          </Container>
+                width: "80px",
+                height: "4px",
+                bgcolor: "#FC6F1F",
+                borderRadius: "2px",
+              },
+            }}
+          >
+            Visit Our Office
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              maxWidth: 600,
+              color: "text.secondary",
+              px: { xs: 2, md: 0 },
+            }}
+          >
+            Come see us in person at our headquarters in New York City
+          </Typography>
         </Box>
+
+        <Box
+          id="map-container"  // Add an ID for targeting this specific map container
+          sx={{
+            height: { xs: 300, sm: 400, md: 500 },
+            width: "100%",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid #E5E7EB",
+            boxShadow:
+              "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+            position: "relative",
+          }}
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179329!2d-73.98784492423988!3d40.74844097138962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1713457264253!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: 20,
+              left: "50%",
+              transform: "translateX(-50%)",
+              bgcolor: "white",
+              px: { xs: 2, md: 3 },
+              py: { xs: 1, md: 2 },
+              borderRadius: "12px",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
+              maxWidth: { xs: "90%", md: "auto" },
+            }}
+          >
+            <MapPin size={16} color="#FC6F1F" />
+            <Typography variant="body2" fontWeight={600} sx={{ fontSize: { xs: "0.75rem", md: "0.875rem" } }}>
+              123 Business Avenue, New York, NY 10001
+            </Typography>
+          </Box>
+        </Box>
+      </Container>
+    </Box>
 
         {/* CTA Section */}
         <Box 
