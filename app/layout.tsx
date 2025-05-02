@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* ✅ Favicon */}
-        <link rel="icon" href="/brand-konnects-logo.png" sizes="any" />
+        <link rel="icon" href="/1.png" sizes="any" />
         {/* Optional: More favicon types for better support */}
         {/* 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

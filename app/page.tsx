@@ -9,7 +9,7 @@ import { ArrowRight, CheckCircle, ChevronRight, Users, Award, Target } from "luc
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import ClientCarousel from "../components/client-carousel"
+import ClientCarousel from "@/components/client-carousel"
 
 export default function Home() {
   const heroRef = useRef(null)
@@ -41,12 +41,13 @@ export default function Home() {
     document.body.style.overflow = 'auto';
   };
   const clients = [
-    { src: "/images/p15.webp", alt: "Client 1" },
-    { src: "/images/p16.webp", alt: "Client 2" },
-    { src: "/images/p17.webp", alt: "Client 3" },
-    { src: "/images/p18.webp", alt: "Client 4" },
-    { src: "/images/p19.webp", alt: "Client 5" },
+    { src: "/images/1.webp", alt: "Client 1" },
+    { src: "/images/2.webp", alt: "Client 2" },
+    { src: "/images/3.webp", alt: "Client 3" },
+    { src: "/images/4.webp", alt: "Client 4" },
+    { src: "/images/5.webp", alt: "Client 5" },
   ];
+  
   // Service cards data
   const serviceCards = [
     {
@@ -579,7 +580,6 @@ export default function Home() {
         <ClientCarousel clients={clients} />
       </div>
     </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-maroon-900 text-white">
         <div className="container mx-auto px-4 text-center">
