@@ -492,7 +492,7 @@ export default function Home() {
 
           <div className="mt-10 text-center">
             <Link
-              href="/garlley"
+              href="/gallery"
               className="bg-maroon-900 hover:bg-maroon-800 text-white px-8 py-3 rounded-md font-medium inline-flex items-center gap-2 transition-all hover:gap-3"
             >
               View More <ArrowRight size={18} />
@@ -520,6 +520,31 @@ export default function Home() {
           )}
         </div>
       </section>
+      {/* Event Section with Fullscreen Video */}
+{/* Heading Section (on top) */}
+<section className="py-10 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center ">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Upcoming Events</h2>
+      <p className="text-slate-600 max-w-2xl mx-auto">
+      Relive the moments from our recent events through this immersive visual experience
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* Fullscreen Video Section */}
+<section className="relative w-full h-screen overflow-hidden bg-black">
+  <video
+    className="absolute top-0 left-0 w-full h-full object-cover"
+    src="/video.mp4" // Replace with actual path
+    autoPlay
+    muted
+    loop
+    playsInline
+  />
+</section>
+
 
       {/* Stats Section */}
       <section ref={statsRef} className="py-20 bg-white">
