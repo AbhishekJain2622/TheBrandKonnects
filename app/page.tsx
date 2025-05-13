@@ -41,11 +41,14 @@ export default function Home() {
     document.body.style.overflow = 'auto';
   };
   const clients = [
-    { src: "/images/1.webp", alt: "Client 1" },
-    { src: "/images/2.webp", alt: "Client 2" },
-    { src: "/images/3.webp", alt: "Client 3" },
-    { src: "/images/4.webp", alt: "Client 4" },
-    { src: "/images/5.webp", alt: "Client 5" },
+    { src: "/Brand Konnects/6.png", alt: "Client 1" },
+    { src: "/Brand Konnects/Aditya Birla.png", alt: "Client 2" },
+    { src: "/Brand Konnects/Godrej.png", alt: "Client 3" },
+    { src: "/Brand Konnects/HDFC Bank.png", alt: "Client 4" },
+    { src: "/Brand Konnects/Kotak Bank.png", alt: "Client 5" },
+     { src: "/Brand Konnects/No Broker Hood.png", alt: "Client 6" },
+    { src: "/Brand Konnects/Utkarsh Bank.png", alt: "Client 7" },
+    { src: "/Brand Konnects/Vercelli.png", alt: "Client 8" },
   ];
   
   // Service cards data
