@@ -208,7 +208,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-gray-900">Call Us</h3>
-                    <p className="text-gray-600 text-sm">+91 9769355135</p>
+                    <p className="text-gray-600 text-sm">022 47831857</p>
                   </div>
                 </div>
 
