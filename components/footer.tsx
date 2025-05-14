@@ -127,27 +127,44 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-orange-600 flex-shrink-0 mt-1" />
-                <span className="text-slate-400">
-                Brand Konnects, Shop No. 2 Gaurav Residency, Mira Road East, Thane 401107
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={20} className="text-orange-600 flex-shrink-0" />
-                <span className="text-slate-400">+91 9769355135</span>
-              </li>
-              <li className="flex items-center gap-3">
-  <Mail size={20} className="text-orange-600 flex-shrink-0" />
-  <a
-    href="mailto:konnect@brandkonnects.com"
-    className="text-slate-400 hover:text-orange-600 transition-colors"
-  >
-    konnect@brandkonnects.com
-  </a>
-</li>
-            </ul>
+           <ul className="space-y-4">
+  <li className="flex items-start gap-3">
+    <MapPin size={20} className="text-orange-600 flex-shrink-0 mt-1" />
+    <div>
+      <p className="text-sm font-semibold text-slate-500">Head Office:</p>
+      <p className="text-sm text-slate-400">
+        Brand Konnects, Shop No. 2, Gaurav Residency Phase 2,<br />
+        Near RBK School
+      </p>
+    </div>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <MapPin size={20} className="text-orange-600 flex-shrink-0 mt-1" />
+    <div>
+      <p className="text-sm font-semibold text-slate-500">Branch Office:</p>
+      <p className="text-sm text-slate-400">
+        House No: 1, Roshan Nagar, Sector: 91, Faridabad
+      </p>
+    </div>
+  </li>
+
+  <li className="flex items-center gap-3">
+    <Phone size={20} className="text-orange-600 flex-shrink-0" />
+    <span className="text-sm text-slate-400">+91 9769355135</span>
+  </li>
+
+  <li className="flex items-center gap-3">
+    <Mail size={20} className="text-orange-600 flex-shrink-0" />
+    <a
+      href="mailto:konnect@brandkonnects.com"
+      className="text-sm text-slate-400 hover:text-orange-600 transition-colors"
+    >
+      konnect@brandkonnects.com
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
 

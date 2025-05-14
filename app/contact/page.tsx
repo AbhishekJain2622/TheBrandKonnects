@@ -168,15 +168,29 @@ export default function Contact() {
               </p>
 
               <div className="space-y-4 mb-8">
-                <div className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                  <div className="w-10 h-10 rounded-md bg-orange-50 flex items-center justify-center text-orange-600 flex-shrink-0">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">Our Location</h3>
-                    <p className="text-gray-600 text-sm">Brand Konnects Shop No. 2 Gaurav Residency phase 2 Near RBK school</p>
-                  </div>
-                </div>
+              <div className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+  <div className="w-10 h-10 rounded-md bg-orange-50 flex items-center justify-center text-orange-600 flex-shrink-0">
+    <MapPin size={20} />
+  </div>
+  <div>
+    <h3 className="font-medium text-gray-900">Our Locations</h3>
+    
+    <div className="mt-2">
+      <p className="text-sm text-gray-500 font-semibold">🏢 Head Office:</p>
+      <p className="text-gray-700 text-sm">
+        Brand Konnects, Shop No. 2, Gaurav Residency Phase 2,<br />
+        Near RBK School
+      </p>
+    </div>
+
+    <div className="mt-4">
+      <p className="text-sm text-gray-500 font-semibold">🏬 Branch Office:</p>
+      <p className="text-gray-700 text-sm">
+        House No: 1, Roshan Nagar, Sector: 91, Faridabad
+      </p>
+    </div>
+  </div>
+</div>   
 
                 <div className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
                   <div className="w-10 h-10 rounded-md bg-orange-50 flex items-center justify-center text-orange-600 flex-shrink-0">

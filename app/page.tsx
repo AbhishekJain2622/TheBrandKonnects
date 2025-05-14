@@ -41,14 +41,16 @@ export default function Home() {
     document.body.style.overflow = 'auto';
   };
   const clients = [
-    { src: "/Brand Konnects/6.png", alt: "Client 1" },
-    { src: "/Brand Konnects/Aditya Birla.png", alt: "Client 2" },
-    { src: "/Brand Konnects/Godrej.png", alt: "Client 3" },
-    { src: "/Brand Konnects/HDFC Bank.png", alt: "Client 4" },
-    { src: "/Brand Konnects/Kotak Bank.png", alt: "Client 5" },
+    { src: "/images5.png", alt: "Client 1" },
+    { src: "/images.jpg", alt: "Client 2" },
+    { src: "/godrej1143.logowik.com.webp", alt: "Client 3" },
+    { src: "/HDFC-Bank-Limited-Symbol.png", alt: "Client 4" },
+    { src: "/images.png", alt: "Client 5" },
      { src: "/Brand Konnects/No Broker Hood.png", alt: "Client 6" },
-    { src: "/Brand Konnects/Utkarsh Bank.png", alt: "Client 7" },
-    { src: "/Brand Konnects/Vercelli.png", alt: "Client 8" },
+    { src: "/utkarsh.jpeg", alt: "Client 7" },
+    { src: "/logo_306x88.png", alt: "Client 8" },
+    { src: "/025.jpeg", alt: "Client 9" },
+     { src: "/1035-don-and-julio.jpg", alt: "Client 10" },
   ];
   
   // Service cards data
