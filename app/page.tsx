@@ -46,11 +46,12 @@ export default function Home() {
     { src: "/godrej1143.logowik.com.webp", alt: "Client 3" },
     { src: "/HDFC-Bank-Limited-Symbol.png", alt: "Client 4" },
     { src: "/images.png", alt: "Client 5" },
-     { src: "/Brand Konnects/No Broker Hood.png", alt: "Client 6" },
+     { src: "/No Broker Hood.png", alt: "Client 6" },
     { src: "/utkarsh.jpeg", alt: "Client 7" },
     { src: "/logo_306x88.png", alt: "Client 8" },
     { src: "/025.jpeg", alt: "Client 9" },
      { src: "/1035-don-and-julio.jpg", alt: "Client 10" },
+      { src: "/6.png", alt: "Client 10" },
   ];
   
   // Service cards data
